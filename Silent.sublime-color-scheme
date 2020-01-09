@@ -1,0 +1,69 @@
+{
+    "name": "Silent",
+    "variables": {
+        "text": "color(black a(- 15%))",
+        "insi": "color(var(text) a(- 80%))",
+        "background": "white",
+        "accent": "#4DAEC7",
+        "warning": "#E58930",
+    },
+    "globals": {
+        "foreground": "var(text)",
+        "background": "var(background)",
+
+        "invisibles": "var(insi)",
+        "caret": "var(accent)",
+        "accent": "var(accent)",
+        "gutter": "var(background)",
+        "gutter_foreground": "var(insi)",
+
+        "selection": "color(var(accent) a(- 75%))",
+        "selection_border_width": "0",
+        "inactive_selection": "color(var(accent) a(- 75%) l(- 15%))",
+        "selection_corner_style": "square",
+        
+        "highlight": "var(warning)",
+        "find_highlight": "var(warning)",
+
+        "active_guide": "var(accent)",
+        "stack_guide": "color(var(accent) a(- 70%))",
+
+        "brackets_options": "foreground bold",
+        "brackets_foreground": "var(warning)",
+
+        "bracket_contents_options": "foreground",
+        "bracket_contents_foreground": "var(warning)"
+    },
+    "rules": [
+        {
+            "scope": "",
+            "foreground": "",
+            "background": "",
+            "font_style": ""
+        },
+        {
+            "scope": "keyword, storage, punctuation, comment",
+            "foreground": "color(var(insi) a(+ 40%))"
+        },
+        {
+            "scope": "string.quoted, string.template, constant",
+            "background": "color(var(accent) a(- 85%))"
+        },
+        {
+            "scope": "support",
+            "font_style": "italic"
+        },
+        {
+            "scope": "variable.other.constant, variable.language, variable.other.object.constant, entity.name",
+            "font_style": "bold"
+        },
+        {
+            "scope": "meta.template-expression",
+            "background": "color(var(accent) a(- 93%))"
+        },
+        {
+            "scope": "punctuation.definition.template-expression",
+            "foreground": "var(accent)"
+        }
+    ]
+}
